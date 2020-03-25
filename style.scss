@@ -1,0 +1,84 @@
+// Font variables
+$default-font: 'proxima-nova', sans-serif;
+$default-font-size: 16px;
+$bold: 700;
+
+// Color variables
+$white: #ffffff;
+$dark-blue: #0f364c;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $default-font;
+  font-size: $default-font-size;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 13vh;
+  background: linear-gradient(95.16deg, #184d6a 0%, #0d344a 100%);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#nav-title {
+  color: $white;
+  font-weight: 900;
+  font-size: 34px;
+}
+
+#icon-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+}
+
+#nav-items {
+  width: 40%;
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: all 0.5s;
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: $white;
+      transition: 0.5s;
+    }
+    &:hover {
+      text-shadow: 0 0 0.5px $white, 0 0 0.5px $white;
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    font-size: 1.12rem;
+  }
+}
+
+#card-row {
+  width: 95%;
+  margin: auto;
+}
+
+// #footer {
+//   background: #efeff2;
+//   width: 100%;
+//   height: 10vh;
+// }
