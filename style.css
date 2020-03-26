@@ -83,8 +83,8 @@ body {
 #navbar #nav-items a {
   color: #ffffff;
   text-decoration: none;
-  -webkit-transition: all 3s;
-  transition: all 3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #navbar #nav-items a:after {
@@ -98,7 +98,7 @@ body {
 }
 
 #navbar #nav-items a:hover {
-  text-shadow: 0 0 0.5px #ffffff, 0 0 0.5px #ffffff;
+  text-shadow: 0 0 0.52px #ffffff, 0 0 0.52px #ffffff;
 }
 
 #navbar #nav-items a:hover:after {

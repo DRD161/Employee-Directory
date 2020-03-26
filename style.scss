@@ -61,7 +61,7 @@ body {
     a {
       color: $white;
       text-decoration: none;
-      transition: all 3s;
+      transition: 0.3s;
       &:after {
         content: '';
         display: block;
@@ -71,7 +71,7 @@ body {
         transition: 0.3s;
       }
       &:hover {
-        text-shadow: 0 0 0.5px $white, 0 0 0.5px $white;
+        text-shadow: 0 0 0.52px $white, 0 0 0.52px $white;
         &:after {
           width: 100%;
         }

@@ -37,6 +37,7 @@
                 <li><a href="#">Teams</a></li>
             </ul>
         </div>
+        <!-- Mobile menu hamburger icon -->
         <svg id="hamburger" width="26" height="18" viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg">
             <line y1="17" x2="26" y2="17" stroke-width="2" />
             <line y1="9" x2="26" y2="9" stroke-width="2" />
@@ -54,8 +55,9 @@
             </ul>
         </div>
     </nav>
+    <!-- Render api data here -->
     <main id="main">
-        <div id="card-row"></div>
+        <section id="card-row"></section>
     </main>
     <footer id="footer">
         <ul class="footer-nav">
@@ -66,7 +68,7 @@
             <a href="#">Teams</a>
         </ul>
     </footer>
-    <!-- Import axios. Used axios because of it's browser support. -->
+    <!-- Import axios. Used axios because of it's wide browser support. -->
     <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./src/index.js"></script>
