@@ -5,6 +5,7 @@ $bold: 700;
 
 // Color variables
 $white: #ffffff;
+$off-white: #e5e5e5;
 $dark-blue: #0f364c;
 
 * {
@@ -27,49 +28,112 @@ body {
   height: 13vh;
   background: linear-gradient(95.16deg, #184d6a 0%, #0d344a 100%);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-#nav-title {
-  color: $white;
-  font-weight: 900;
-  font-size: 34px;
-}
-
-#icon-wrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 25%;
-}
-
-#nav-items {
-  width: 40%;
-  a {
+  #nav-title {
     color: $white;
-    text-decoration: none;
-    transition: all 0.5s;
-    &:after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 2px;
-      background: $white;
-      transition: 0.5s;
+    font-weight: 900;
+    font-size: 34px;
+    @media screen and (max-width: 576px) {
+      font-size: 22px;
     }
-    &:hover {
-      text-shadow: 0 0 0.5px $white, 0 0 0.5px $white;
-      &:after {
-        width: 100%;
+  }
+  #icon-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    @media screen and (max-width: 1024px) {
+      width: 40%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 50%;
+    }
+    @media screen and (max-width: 576px) {
+      width: 85%;
+    }
+    .user-icon {
+      @media screen and (max-width: 576px) {
+        width: 12%;
       }
     }
   }
-  ul {
-    list-style: none;
+  #nav-items {
+    width: 40%;
+    a {
+      color: $white;
+      text-decoration: none;
+      transition: all 3s;
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $white;
+        transition: 0.3s;
+      }
+      &:hover {
+        text-shadow: 0 0 0.5px $white, 0 0 0.5px $white;
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+      margin: 0;
+      font-size: 1.12rem;
+    }
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+  #mobile-menu {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: $white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 1;
     display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-    font-size: 1.12rem;
+    justify-content: center;
+    align-items: center;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0;
+      margin: 0;
+      height: 30%;
+    }
+    a {
+      color: #0f364c;
+      text-decoration: none;
+      font-size: 2.5rem;
+    }
+    .close-btn {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+    }
+  }
+}
+
+#hamburger {
+  margin: 0 5%;
+  cursor: pointer;
+  stroke: $white;
+  &:hover {
+    stroke: $off-white;
+  }
+  @media screen and (min-width: 1200px) {
+    display: none;
   }
 }
 
@@ -79,11 +143,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    justify-content: space-around;
+  }
   .user-wrapper {
     width: 32%;
     display: flex;
     justify-content: center;
     height: 200px;
+    @media screen and (max-width: 1024px) {
+      width: 40%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   .user-card {
     width: 100%;
@@ -94,6 +168,15 @@ body {
     background: $white;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    @media screen and (max-width: 768px) {
+      width: 75%;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
     .user-image {
       width: 25%;
       border-radius: 50%;
@@ -117,6 +200,7 @@ body {
   .user-phone,
   .user-location {
     font-size: 14px;
+    color: #4c4c4c;
   }
 
   .user-info-bottom {

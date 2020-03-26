@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Load fonts -->
+    <!-- Load font -->
     <link rel="stylesheet" href="https://use.typekit.net/whp5fgy.css">
     <!-- Load style sheet -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Employee Directory</title>
 </head>
 
@@ -15,7 +16,8 @@
     <nav id="navbar">
         <div id="icon-wrapper">
             <!-- User icon -->
-            <svg width="50" height="60" viewBox="0 0 50 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="50" height="60" viewBox="0 0 50 60" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="user-icon">
                 <path
                     d="M7.81205 60H41.8101C46.1223 60 49.6221 56.5002 49.6221 52.188C49.6221 49.5631 48.3097 47.1257 46.1223 45.6258C42.6225 43.251 39.4352 41.5011 37.3728 40.4386C35.4979 42.6885 32.9981 44.6884 29.7483 45.8758C28.1859 46.4383 26.4985 46.7508 24.8111 46.7508C23.1237 46.7508 21.4988 46.5008 19.9363 45.9383C16.6865 44.8134 14.1242 42.8135 12.2493 40.5011C10.1869 41.5636 7.06209 43.376 3.4998 45.6883C1.31242 47.1257 0 49.6256 0 52.2504C0 56.5002 3.4998 60 7.81205 60Z"
                     fill="white" />
@@ -34,12 +36,31 @@
                 <li><a href="#">Teams</a></li>
             </ul>
         </div>
+        <svg id="hamburger" width="26" height="18" viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg"
+            onclick="handleOpen()">
+            <line y1="17" x2="26" y2="17" stroke-width="2" />
+            <line y1="9" x2="26" y2="9" stroke-width="2" />
+            <line y1="1" x2="26" y2="1" stroke-width="2" />
+        </svg>
+        <!-- Collapsable nav menu -->
+        <div id="mobile-menu">
+            <ul>
+                <li><a href="#" onclick="handleClose()" class="close-btn">X</a></li>
+                <li><a href="#">Employees</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">Org Chart</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Teams</a></li>
+            </ul>
+        </div>
     </nav>
     <main id="main">
         <div id="card-row"></div>
     </main>
     <footer id="footer"></footer>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Import axios. Used axios because of it's browser support. -->
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./src/index.js"></script>
 </body>
 
