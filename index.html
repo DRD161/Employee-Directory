@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/whp5fgy.css">
     <!-- Load style sheet -->
     <link rel="stylesheet" href="./style.css">
+    <!-- Load AOS animation library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Employee Directory</title>
 </head>
@@ -36,16 +37,15 @@
                 <li><a href="#">Teams</a></li>
             </ul>
         </div>
-        <svg id="hamburger" width="26" height="18" viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg"
-            onclick="handleOpen()">
+        <svg id="hamburger" width="26" height="18" viewBox="0 0 26 18" xmlns="http://www.w3.org/2000/svg">
             <line y1="17" x2="26" y2="17" stroke-width="2" />
             <line y1="9" x2="26" y2="9" stroke-width="2" />
             <line y1="1" x2="26" y2="1" stroke-width="2" />
         </svg>
         <!-- Collapsable nav menu -->
         <div id="mobile-menu">
+            <a href="#" id="close-btn" class="close-btn-styles">X</a>
             <ul>
-                <li><a href="#" onclick="handleClose()" class="close-btn">X</a></li>
                 <li><a href="#">Employees</a></li>
                 <li><a href="#">Departments</a></li>
                 <li><a href="#">Org Chart</a></li>
@@ -57,7 +57,15 @@
     <main id="main">
         <div id="card-row"></div>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <ul class="footer-nav">
+            <a href="#">Employees</a>
+            <a href="#">Departments</a>
+            <a href="#">Org Chart</a>
+            <a href="#">Locations</a>
+            <a href="#">Teams</a>
+        </ul>
+    </footer>
     <!-- Import axios. Used axios because of it's browser support. -->
     <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
