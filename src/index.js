@@ -2,11 +2,13 @@ const url =
   'https://randomuser.me/api/?inc=picture,name,email,phone,location&results=24';
 
 // Take api response and map results into an array
-axios.get(url).then(response => {
-  const data = response.data.results;
-  var userData = data.map(user => {
-    // Return values as markup
-    return `
+axios
+  .get(url)
+  .then(response => {
+    const data = response.data.results;
+    var userData = data.map(user => {
+      // Return values as markup
+      return `
     <div class="user-wrapper">
     <div class="user-card" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-anchor-placement="top-bottom">
       <img src="${user.picture.large}" alt="user image" class="user-image">
@@ -20,10 +22,15 @@ axios.get(url).then(response => {
       </div>
     </div>
   </div>`;
+    });
+    // Display data here
+    document.getElementById('card-row').innerHTML = userData.join('');
+  })
+  .catch(error => {
+    alert(
+      'An error has occurred! Employee data could not be loaded at this time. Please contact customer support or try again later.'
+    );
   });
-  // Display data here
-  document.getElementById('card-row').innerHTML = userData.join('');
-});
 
 // Function to handle mobile nav open
 const handleOpen = document
