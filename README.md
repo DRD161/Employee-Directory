@@ -27,4 +27,4 @@ npm install
 
 Once all packages have been installed open the index.html file in your browser of choice.
 
-_This project does not utilize a bundler do to it's simplicity. In larger projects a bundler such as Webpack or Parcel would be used._
+_This project does not utilize a bundler due to it's simplicity. In larger projects a bundler such as Webpack or Parcel would be used._
