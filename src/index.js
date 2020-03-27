@@ -21,6 +21,7 @@ axios.get(url).then(response => {
     </div>
   </div>`;
   });
+  // Display data here
   document.getElementById('card-row').innerHTML = userData.join('');
 });
 
