@@ -12,7 +12,12 @@ You must the latest version of Node and npm installed on your machine.
 
 ## Installing
 
-To install packages, open your terminal run:
+To clone this repo to your local machine open your terminal and run:
+```
+git clone https://github.com/DRD161/Employee-Directory.git
+```
+
+After cloning the repo install npm packages. To install packages open your terminal run:
 
 ```
 npm install
