@@ -17,7 +17,7 @@ To clone this repo to your local machine open your terminal and run:
 git clone https://github.com/DRD161/Employee-Directory.git
 ```
 
-After cloning the repo install npm packages. To install packages open your terminal run:
+After cloning the repo cd into the directory it was cloned to and install the npm packages. To install packages open your terminal run:
 
 ```
 npm install
